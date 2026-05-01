@@ -1,0 +1,142 @@
+// Prisma schema for Fast Transport Wien
+// Switch provider to "postgresql" for production deployments.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------- Auth ----------------
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ---------------- Customers ----------------
+model Customer {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  company   String?
+  address   String?
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+// ---------------- Orders ----------------
+enum OrderStatus {
+  RECEIVED      // Eingegangen
+  IN_REVIEW     // In Prüfung
+  CONFIRMED     // Bestätigt
+  IN_PROGRESS   // In Bearbeitung
+  DELIVERED     // Zugestellt
+  CANCELLED     // Storniert
+}
+
+enum ServiceType {
+  PACKAGE       // Pakete & Sendungen
+  FLOWERS       // Blumenlieferung
+  DOCUMENTS     // Dokumente
+  MAGAZINES     // Magazine & Zeitungen
+  STORE_PICKUP  // Bestellungen aus Geschäften
+  EXPRESS       // Express Lieferung
+  COOLING       // Kühltransport
+  BUSINESS      // Firmenkunden & Daueraufträge
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique // FTW-YYYY-XXX style for human reference
+  status          String      @default("RECEIVED") // OrderStatus enum stringified for SQLite compat
+
+  // Customer
+  customerId      String?
+  customer        Customer?   @relation(fields: [customerId], references: [id])
+  customerName    String
+  customerEmail   String
+  customerPhone   String
+  customerCompany String?
+
+  // Service
+  serviceType     String      // ServiceType enum stringified
+  goodsType       String?     // Art der Ware
+  weightKg        Float?
+  isExpress       Boolean     @default(false)
+  isCooling       Boolean     @default(false)
+
+  // Logistics
+  pickupAddress   String
+  pickupLat       Float?
+  pickupLng       Float?
+  scheduledDate   DateTime
+  scheduledTime   String?
+  notes           String?
+  uploadedFile    String?     // path of optionally uploaded file
+
+  stops           OrderStop[]
+
+  // Pricing (stored in cents to avoid float issues)
+  subtotalGrossCents Int
+  discountCents      Int       @default(0)
+  totalGrossCents    Int
+  appliedDiscountCode String?
+  numAddresses       Int
+
+  // Admin overrides
+  adminPriceCents    Int?     // if set, replaces totalGrossCents on the invoice
+  adminNote          String?
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  invoice         Invoice?
+}
+
+model OrderStop {
+  id        String  @id @default(cuid())
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   String
+  position  Int     // 0-indexed sequence
+  address   String
+  lat       Float?
+  lng       Float?
+  contact   String?
+}
+
+// ---------------- Invoices ----------------
+model Invoice {
+  id              String   @id @default(cuid())
+  invoiceNumber   String   @unique // FTW-YYYY-XXX
+  order           Order    @relation(fields: [orderId], references: [id])
+  orderId         String   @unique
+  issuedAt        DateTime @default(now())
+  dueDays         Int      @default(7)
+
+  // Snapshotted at issuance (immutable)
+  customerName    String
+  customerAddress String
+  description     String   // multi-line invoice items
+  netCents        Int
+  vatCents        Int
+  grossCents      Int
+}
+
+// ---------------- Discount codes ----------------
+model DiscountCode {
+  id           String   @id @default(cuid())
+  code         String   @unique
+  active       Boolean  @default(true)
+  // Backend-only logic params
+  effectivePriceGrossCents Int      // e.g. 2000 = 20€ per address with this code
+  maxDiscountGrossCents    Int      // e.g. 10000 = 100€ max per order
+  description  String?
+  createdAt    DateTime @default(now())
+}

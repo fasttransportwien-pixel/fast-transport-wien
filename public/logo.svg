@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Fast Transport Wien Logo">
+  <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="8"/>
+  <g stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M40 95 H140"/>
+    <path d="M115 75 L150 95 L115 115"/>
+  </g>
+  <text x="100" y="155" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="42" fill="currentColor" letter-spacing="2">FTW</text>
+</svg>

@@ -1,0 +1,268 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "order": "Place an order",
+    "contact": "Contact",
+    "admin": "Admin",
+    "languageLabel": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "common": {
+    "ctaOrder": "Place an order",
+    "ctaContact": "Get in touch",
+    "learnMore": "Learn more",
+    "loading": "Loading…",
+    "perAddress": "per address",
+    "incVat": "incl. 20% VAT",
+    "vat20": "VAT 20%",
+    "currency": "EUR",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "total": "Total",
+    "net": "Net",
+    "gross": "Gross",
+    "submit": "Send request",
+    "send": "Send",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "home": {
+    "heroEyebrow": "Vienna · Courier · Transport",
+    "heroTitle": "Fast deliveries in Vienna – reliable, flexible and personal.",
+    "heroSubtitle": "Fast Transport Wien E.U. delivers parcels, documents, flowers, refrigerated goods and store pickups on time – for private and business customers across Vienna.",
+    "trustBar": "Trusted by Vienna businesses for years",
+    "whyTitle": "Why Fast Transport Wien?",
+    "whyItems": {
+      "fast": {
+        "title": "Express-fast",
+        "body": "Same-day delivery in Vienna – and express within 60 minutes when you need it."
+      },
+      "reliable": {
+        "title": "Reliable & insured",
+        "body": "Personal handling and secure transport for every shipment."
+      },
+      "transparent": {
+        "title": "Transparent pricing",
+        "body": "Fixed price per address, shown clearly before you submit."
+      },
+      "personal": {
+        "title": "Always reachable",
+        "body": "Direct line to the owner – no call center, no waiting."
+      }
+    },
+    "reviewsTitle": "What our customers say",
+    "reviews": [
+      {
+        "quote": "Top reliability, always on time and very personal service. We send all our magazines through Fast Transport Wien.",
+        "name": "Media for Med Magazine Service GmbH",
+        "role": "Customer since 2023"
+      },
+      {
+        "quote": "Booked at short notice and the parcel was at the customer one hour later. Exactly what we needed.",
+        "name": "Sara Köhler",
+        "role": "Boutique owner"
+      },
+      {
+        "quote": "Quick communication, fair prices, professional service – highly recommended.",
+        "name": "Markus Weber",
+        "role": "Event agency"
+      }
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "How fast can you deliver?",
+        "a": "Standard same-day deliveries in Vienna. Express usually within 60 minutes after confirmation."
+      },
+      {
+        "q": "How much does a delivery cost?",
+        "a": "Standard price is €25 per address incl. 20% VAT. With code FTW20 you save up to 20%."
+      },
+      {
+        "q": "Which payment methods do you accept?",
+        "a": "Invoice with IBAN bank transfer. Business customers receive a PDF invoice."
+      },
+      {
+        "q": "Do you also deliver outside Vienna?",
+        "a": "On request we also deliver in the surrounding area. Please contact us for a custom quote."
+      }
+    ],
+    "ctaBanner": {
+      "title": "Ready for your first delivery?",
+      "body": "Place an order in less than 2 minutes – price visible immediately.",
+      "cta": "Place an order"
+    }
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "The right solution for every transport need in Vienna.",
+    "items": {
+      "PACKAGE": {
+        "title": "Parcels & shipments",
+        "body": "Safe transport for parcels of any size – from a letter to a large box.",
+        "audience": "Private & business"
+      },
+      "FLOWERS": {
+        "title": "Flower delivery",
+        "body": "Fresh flowers delivered with care and on time – also for special occasions.",
+        "audience": "Florists, private"
+      },
+      "DOCUMENTS": {
+        "title": "Documents",
+        "body": "Confidential documents, contracts and files – hand-to-hand delivery.",
+        "audience": "Law firms, businesses"
+      },
+      "MAGAZINES": {
+        "title": "Magazines & newspapers",
+        "body": "Regular distribution of magazines and newspapers to many addresses.",
+        "audience": "Publishers, media"
+      },
+      "STORE_PICKUP": {
+        "title": "Pickups from stores",
+        "body": "We shop, pick up and deliver directly to your home or office.",
+        "audience": "Private customers"
+      },
+      "EXPRESS": {
+        "title": "Express delivery",
+        "body": "Arrived in under 60 minutes – when it really has to be fast.",
+        "audience": "Businesses, emergencies"
+      },
+      "COOLING": {
+        "title": "Refrigerated transport",
+        "body": "Temperature-controlled delivery for food, medication and sensitive goods.",
+        "audience": "Pharmacies, gastronomy"
+      },
+      "BUSINESS": {
+        "title": "Business & recurring",
+        "body": "Custom conditions for recurring tours and standing orders.",
+        "audience": "Business customers"
+      }
+    },
+    "ctaCard": "Place an order"
+  },
+  "order": {
+    "title": "Place an order",
+    "subtitle": "No online payment – we review every request personally and get back to you shortly.",
+    "sectionLogistics": "Logistics",
+    "sectionService": "Service",
+    "sectionContact": "Contact details",
+    "sectionExtras": "Additional information",
+    "pickupAddress": "Pickup address",
+    "pickupAddressPlaceholder": "Street, number, ZIP, Vienna",
+    "stopsTitle": "Delivery address(es)",
+    "stopAddressPlaceholder": "Enter delivery address",
+    "addStop": "Add another address",
+    "removeStop": "Remove",
+    "stopContact": "Recipient (optional)",
+    "scheduledDate": "Date",
+    "scheduledTime": "Time",
+    "serviceType": "Service type",
+    "goodsType": "Type of goods",
+    "goodsTypePlaceholder": "e.g. documents, flowers, food",
+    "weightKg": "Weight (kg)",
+    "isExpress": "Express delivery",
+    "isCooling": "Refrigerated transport",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company (optional)",
+    "notes": "Additional information",
+    "notesPlaceholder": "Important notes, e.g. floor, door code, time window",
+    "fileUpload": "Upload file (optional)",
+    "discountCode": "Discount code (optional)",
+    "discountHint": "Save up to 20% with code FTW20",
+    "discountApplied": "Discount code applied",
+    "discountInvalid": "Discount code invalid",
+    "acceptTerms": "I accept the Terms and Conditions",
+    "acceptPrivacy": "I accept the Privacy Policy",
+    "termsRequired": "Terms acceptance is required",
+    "privacyRequired": "Privacy acceptance is required",
+    "summaryTitle": "Price summary",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "successTitle": "Thank you!",
+    "successBody": "Your request was successfully submitted. We are reviewing your order and will get back to you shortly.",
+    "errorGeneric": "Something went wrong. Please try again or call us.",
+    "yourReference": "Your reference"
+  },
+  "status": {
+    "RECEIVED": "Received",
+    "IN_REVIEW": "In review",
+    "CONFIRMED": "Confirmed",
+    "IN_PROGRESS": "In progress",
+    "DELIVERED": "Delivered",
+    "CANCELLED": "Cancelled"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Drop us a line – we reply personally and fast.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "send": "Send message",
+      "success": "Thanks! We will get back to you shortly."
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved.",
+    "tagline": "Fast deliveries in Vienna – reliable, flexible and personal."
+  },
+  "cookie": {
+    "message": "We only use technically required cookies so the site works. Read more in our privacy policy.",
+    "accept": "Got it"
+  },
+  "legal": {
+    "imprintTitle": "Imprint",
+    "privacyTitle": "Privacy policy",
+    "termsTitle": "Terms and conditions"
+  },
+  "admin": {
+    "loginTitle": "Admin login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "loginError": "Invalid credentials",
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "invoices": "Invoices",
+    "customers": "Customers",
+    "settings": "Settings",
+    "kpiOpenOrders": "Open orders",
+    "kpiInProgress": "In progress",
+    "kpiDeliveredMonth": "Delivered (month)",
+    "kpiRevenueMonth": "Revenue (month)",
+    "newest": "Newest orders",
+    "viewAll": "View all",
+    "filters": "Filters",
+    "search": "Search",
+    "noResults": "No orders found.",
+    "orderDetails": "Order details",
+    "changeStatus": "Change status",
+    "adjustPrice": "Adjust price (€ incl. VAT)",
+    "adjustNote": "Internal note",
+    "savePrice": "Save price",
+    "createInvoice": "Create invoice",
+    "downloadInvoice": "Download PDF",
+    "viewInvoice": "View invoice",
+    "confirmAndNotify": "Confirm & notify customer",
+    "back": "Back",
+    "originalPrice": "Original price",
+    "finalPrice": "Final price"
+  }
+}
