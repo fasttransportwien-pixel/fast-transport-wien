@@ -5,7 +5,7 @@
   "description": "Fast Transport Wien E.U. – Professionelle Website mit Online-Bestellsystem",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma migrate deploy && next build",
+    "build": "npm install --legacy-peer-deps && prisma generate && prisma migrate deploy && next build"
     "start": "next start",
     "lint": "next lint",
     "db:push": "prisma db push",
