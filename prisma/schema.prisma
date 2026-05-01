@@ -33,25 +33,7 @@ model Customer {
 }
 
 // ---------------- Orders ----------------
-enum OrderStatus {
-  RECEIVED      // Eingegangen
-  IN_REVIEW     // In Prüfung
-  CONFIRMED     // Bestätigt
-  IN_PROGRESS   // In Bearbeitung
-  DELIVERED     // Zugestellt
-  CANCELLED     // Storniert
-}
 
-enum ServiceType {
-  PACKAGE       // Pakete & Sendungen
-  FLOWERS       // Blumenlieferung
-  DOCUMENTS     // Dokumente
-  MAGAZINES     // Magazine & Zeitungen
-  STORE_PICKUP  // Bestellungen aus Geschäften
-  EXPRESS       // Express Lieferung
-  COOLING       // Kühltransport
-  BUSINESS      // Firmenkunden & Daueraufträge
-}
 
 model Order {
   id              String      @id @default(cuid())
